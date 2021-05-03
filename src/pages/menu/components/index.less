@@ -1,0 +1,99 @@
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.scrollview-left {
+  width: 200px;
+  text-align: center;
+}
+.at-luckin-menu {
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: relative;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  box-sizing: border-box;
+  &-tag {
+    position: absolute;
+    min-width: 90rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 20rpx;
+    color: #fff;
+    border-radius: 15rpx 0 15rpx 0;
+    background: linear-gradient(to left, #f95f29 0%, #f78956 100%);
+    right: 0;
+  }
+  &-content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 200rpx;
+    height: 100rpx;
+    text-align: center;
+    .icon-banyuan {
+      position: absolute;
+      left: -11rpx;
+      color: #7283d1;
+    }
+  }
+}
+.selected-view {
+  color: #7283d1;
+}
+.at-luckin-menu-left {
+  position: relative;
+  &_img{
+    height: 182rpx;
+    width: 180rpx;
+  }
+  .at-luckin-menu-tag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.at-luckin-menu-right {
+  margin-left: 20rpx;
+  position: relative;
+  .at-luckin-col-top {
+    text-align: start;
+    font-weight: 600;
+    font-size: 45rpx;
+  }
+  .at-luckin-col-center {
+    text-align: start;
+    color: #a6a6a6;
+  }
+  .at-luckin-col-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rpx;
+    .at-luckin-menu-price {
+      height: 45rpx;
+      display: flex;
+      align-items: center;
+      &-content {
+        color: #dd6809;
+        font-size: 30rpx;
+        .icon-jiage {
+          font-size: 30rpx!important;
+        }
+      }
+      &-original {
+        height: 35rpx;
+        margin-left: 15rpx;
+        text-decoration: line-through;
+        text-align: center;
+        font-size: 27rpx;
+        color: #949494;
+      }
+  
+    }
+  }
+}
