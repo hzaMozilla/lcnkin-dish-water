@@ -12,7 +12,7 @@ interface menuProps {
   distribution: Boolean,
   top: number
 }
-export default class Menu extends Taro.Component<{}, menuProps> {
+export default class Menu extends React.Component<{}, menuProps> {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,31 +21,24 @@ export default class Menu extends Taro.Component<{}, menuProps> {
       top: 0
     }
   }
-  // config: Taro.Config = {
-  //   usingComponents: {
-  //     'navbar': '@src/dependences/component/navBar/NavBar', // 书写第三方组件的相对路径
-  //   },
-  //   window: {
-  //     backgroundTextStyle: 'light',
-  //     navigationBarBackgroundColor: '#fff',
-  //     navigationBarTitleText: 'Taro',
-  //     navigationBarTextStyle: 'black',
-  //     navigationStyle: 'default'
-  //   }
-  // }
   componentWillMount() {
-    // Taro.setNavigationBarTitle({
-    //   title: "动态标题"
-    // })
+    Taro.setNavigationBarTitle({
+      title: "动态标题"
+    })
     const { menuButton } = getSyetemInfoAndButtonBounding();
     this.setState({ top: menuButton.top });
+  }
+  navigateToIndexes() {
+    Taro.navigateTo({
+      url: 'components/deliveryAddress/DeliveryAddress'
+    })
   }
   render() {
     return (
       <React.Fragment>
         <View className="luckin-newborn-zone" style={{ paddingTop: this.state.top }}>
           <SwiperComponent swiperInfoSet={swiperInfoSet} height={'250rpx'} />
-          <View className="luckin-newborn-zone-bottom">
+          <View className="luckin-newborn-zone-bottom" onClick={this.navigateToIndexes.bind(this)}>
             <View className="luckin-newborn-zone-bottom_lfet" >
               <AtIcon prefixClass="icon" value="ditu" />
               <View>

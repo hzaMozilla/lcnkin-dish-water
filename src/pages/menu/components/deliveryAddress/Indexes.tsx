@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Taro, { Component, Config } from '@tarojs/taro';
+import Taro from '@tarojs/taro';
 import { View } from '@tarojs/components'
 import { AtIndexes } from 'taro-ui';
 import NavBar from '@src/dependences/component/navBar/NavBar';
@@ -9,7 +9,7 @@ import 'taro-ui/dist/style/components/indexes.scss';
 import 'taro-ui/dist/style/components/list.scss';
 import './index.less';
 
-export class IndexesComponent extends React.Component {
+export default class IndexesComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,20 +19,8 @@ export class IndexesComponent extends React.Component {
   }
   onNavigateBack(item) {
     Taro.navigateBack({
-      delta: item // 返回上一级页面。
+      delta: item
     });
-  }
-  config: Config = {
-    // usingComponents: {
-    //   'navbar': '@src/dependences/component/navBar/NavBar', // 书写第三方组件的相对路径
-    // },
-    // window: {
-    //   backgroundTextStyle: 'light',
-    //   navigationBarBackgroundColor: '#fff',
-    //   navigationBarTitleText: 'Taro',
-    //   navigationBarTextStyle: 'black',
-    //   navigationStyle: 'custom'
-    // }
   }
   render() {
     const list = [{
@@ -61,19 +49,20 @@ export class IndexesComponent extends React.Component {
     ]
     return (
       <View style={{ height: '100%', position: 'relative' }}>
-        {/* <NavBar title="配送地址" /> */}
-        <View className="lcukin-map-pin-warp" onClick={this.onNavigateBack.bind(this)}>
-          <View>选择城市</View>
-          <View className="lcukin-map-pin-warp-city">
-            <View className="at-icon at-icon-map-pin" />
-            <View>深圳</View>
+        <NavBar title="配送地址">
+          <View className="lcukin-map-pin-warp" onClick={this.onNavigateBack.bind(this)}>
+            <View>选择城市</View>
+            <View className="lcukin-map-pin-warp-city">
+              <View className="at-icon at-icon-map-pin" />
+              <View>深圳</View>
+            </View>
           </View>
-        </View>
-        <AtIndexes
-          list={list}
-          animation={true}
-          onClick={this.onNavigateBack.bind(this)}>
-        </AtIndexes>
+          <AtIndexes
+            list={list}
+            animation={true}
+            onClick={this.onNavigateBack.bind(this)}>
+          </AtIndexes>
+        </NavBar>
       </View >
     )
   }

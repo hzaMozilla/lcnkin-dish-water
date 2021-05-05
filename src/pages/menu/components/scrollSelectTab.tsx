@@ -54,7 +54,6 @@ export class ScrollViewTab extends React.Component<tabsList, stateParams> {
     }, 1000);
   }
   onScrollToUpper(e) {
-    console.log(e)
   }
   resultTo(e: any) {
     let index: number = e?.index;

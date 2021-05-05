@@ -26,7 +26,7 @@ export class SwiperComponent extends React.Component<swiperProps, State> {
   componentDidMount() {
   }
   jumpTo(url: string): void {
-    console.log(url)
+    // console.log(url)
     // Taro.navigateTo({
     //   url
     // })

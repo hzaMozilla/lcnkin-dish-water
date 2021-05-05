@@ -4,7 +4,6 @@ import { View } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import { saveUserInfo, savePage } from '@src/store/action';
 import { SwiperComponent } from '@src/dependences/component/swiper';
-import TabBar from '@src/common/tab';
 import TabSelect from '@src/dependences/component/tabs';
 import { Activity } from './components/activity';
 import './index.less';
@@ -21,12 +20,11 @@ export class Home extends React.Component {
       swiperInfo: [1]
     }
   }
-  config = {
+  config: Taro.Config = {
     navigationStyle: 'default',
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTextStyle: 'black',
       navigationStyle: 'default',
       navigationBarTitleText: '菜单1111',
     }
@@ -40,7 +38,6 @@ export class Home extends React.Component {
         <SwiperComponent swiperInfoSet={swiperInfoSet} />
         <Activity activityInfoSet={activityInfoSet} />
         <TabSelect tabList={tabList} />
-        <TabBar />
       </View >
     )
   }

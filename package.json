@@ -36,11 +36,13 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@tarojs/async-await": "2.1.5",
     "@tarojs/components": "3.0.14",
     "@tarojs/react": "3.0.14",
     "@tarojs/redux": "^2.2.10",
     "@tarojs/runtime": "3.0.14",
     "@tarojs/taro": "3.0.14",
+    "@tarojs/taro-weapp": "2.1.5",
     "axios": "^0.21.1",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
@@ -49,9 +51,11 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "taro-ui": "^3.0.0-alpha.10"
+    "taro-ui": "^3.0.0-alpha.10",
+    "nervjs": "^1.5.7"
   },
   "devDependencies": {
+    "@tarojs/plugin-babel": "2.1.5",
     "@babel/core": "^7.8.0",
     "@tarojs/mini-runner": "3.0.14",
     "@tarojs/webpack-runner": "3.0.14",

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import configStore from './store';
-import TabBar from '@src/common/tab';
 import '@src/styles/variable.scss';
 import './app.less';
 const store = configStore();
@@ -29,10 +28,8 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         {this.props.children}
-        <TabBar />
       </Provider>
     )
   }
 }
-
 export default App;

@@ -24,7 +24,6 @@ interface commodity {
 
 export function CommodityComponent(porps: commodity) {
   const { carInfo } = porps;
-  console.log(carInfo)
   return (
     <View className="luckin-commodity-card">
       {

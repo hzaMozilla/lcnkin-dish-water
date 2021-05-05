@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from '@tarojs/components';
 import { AtTabs, AtTabsPane } from 'taro-ui';
 import { CommodityComponent } from '@src/dependences/component/commodityCard';
 import { carInfo } from './data';

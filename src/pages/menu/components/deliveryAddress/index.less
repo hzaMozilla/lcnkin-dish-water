@@ -1,3 +1,6 @@
+page {
+  background-color: #f6f6f6;
+}
 .lcnkin-address-navbar {
   height: 64rpx;
   display: flex;
@@ -10,20 +13,19 @@
   align-items: center;
   margin-top: 20rpx;
 }
-
 .luckin-delivery-address{
   height: 70rpx;
-  width: 510rpx;
+  width: 580rpx;
   padding: 10rpx;
   display: flex;
   justify-content: space-around;
   border-radius: 33rpx;
-  background-color: #343a9c;
+  background-color: #7186c5;
   font-size: 28rpx;
   box-sizing: border-box;
   margin: auto;
   &-selectbar {
-    width: 170rpx;
+    width: 190rpx;
     height: 50rpx;
     line-height: 50rpx;
     text-align: center;
@@ -35,4 +37,142 @@
 .luckin-distribution-sel {
   background-color: #fff;
   border-radius: 32rpx;
+}
+.luckin-delivery-address-searchbar {
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  justify-self: start;
+  align-items: center;
+  background-color: #c7c7c9;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background-color: #fff;
+  .luckin-delivery-address-searchinp {
+    width: 100%;
+    background-color: #fff;
+    .at-search-bar__input-cnt {
+      background-color: #fff;
+    }
+  }
+  .luckin-delivery-address-city {
+    width: 180rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: start;
+  }
+}
+.lcukin-map-pin-warp {
+  padding: 20rpx;
+  &-city {
+    width: 100%;
+    height: 90rpx;
+    padding-left: 30rpx;
+    border-radius: 15rpx;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 25rpx;
+    color: #7186c5;
+    box-sizing: border-box;
+    .at-icon-map-pin {
+      color: #0d0d0e;
+    }
+  }
+}
+.luckin-deliveryAddress-item {
+  min-height: 170rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  &-top,&-center,&-bottom {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    min-height: 44rpx;
+    color: #555;
+  }
+  &-top{
+    .at-item-col1 {
+      width: 150rpx;
+      height: 44rpx;
+      border-radius: 5rpx;
+      text-align: center;
+      background-color: #6e87bf;
+      color: #fff;
+    }
+    .at-item-col2 {
+      width: 465rpx;
+      white-space: normal;
+      margin-left: 10rpx;
+    }
+    .at-item-col3 {
+      width: 85rpx;
+    }
+  }
+  &-center{
+    margin-top: 20rpx;
+    .at-item-col1 {
+      margin-left: 10rpx;
+    }
+    .at-item-col2 {
+      width: 60rpx;
+      height: 35rpx;
+      text-align: center;
+      line-height: 35rpx;
+      margin-left: 10rpx;
+      color: #fff;
+      background-color: #c5c3c6;
+      font-size: 20rpx;
+    }
+  }
+  &-bottom{
+    margin-top: 20rpx;
+    .at-item-col1 {
+      width: 535rpx;
+      white-space: normal;
+      margin-left: 10rpx;
+    }
+    .at-item-col2 {
+      width: 140rpx;
+      color: #8b90b8;
+    }
+  }
+}
+
+.lckin-homeDelivery-form {
+  padding: 20rpx;
+  &-item {
+    display: flex;
+    align-items: center;
+    height: 90rpx;
+    border-bottom: 1rpx #d6e4ef solid;
+    margin-left: 32rpx;
+    transform: scaleY(1);
+    margin-right: 16rpx;
+    &-radio {
+      width: 350rpx;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 16rpx;
+    }
+    .line-sex {
+      width: 172rpx;
+    }
+  }
+  &-sub {
+    position: fixed;
+    bottom: 100rpx;
+    width: 90%;
+    left: 0;
+    right: 0;
+    background-color: #7286c5;
+  }
+  .at-list__item {
+    padding: 0;
+  }
 }
