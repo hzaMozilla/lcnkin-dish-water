@@ -13,6 +13,7 @@ type State = {
 interface swiperProps {
   swiperInfoSet: Array<swiperInfoSetenums>,
   height?: string,
+  indicatorDots?: boolean
 }
 import "./index.less";
 export class SwiperComponent extends React.Component<swiperProps, State> {
@@ -32,17 +33,18 @@ export class SwiperComponent extends React.Component<swiperProps, State> {
     // })
   }
   render() {
+    const { height, indicatorDots = false } = this.props;
     return (
       <React.Fragment>
         {
           this.props?.swiperInfoSet?.length > 0 ? <Swiper
             className="luckin-swiper-waper-content"
-            style={{ minHeight: `${this.props.height ? this.props.height : '430rpx'}` }}
+            style={{ minHeight: `${height ? height : '430rpx'}` }}
             indicatorColor='#999'
             indicatorActiveColor='#333'
             vertical={false}
             circular
-            indicatorDots
+            indicatorDots={indicatorDots}
             autoplay
           >
             {this.props?.swiperInfoSet.map((item, index) => {

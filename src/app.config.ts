@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/detail/Detail',
     'pages/menu/components/deliveryAddress/HomeDelivery',
     'pages/menu/components/deliveryAddress/DeliveryAddress',
     'pages/home/index',

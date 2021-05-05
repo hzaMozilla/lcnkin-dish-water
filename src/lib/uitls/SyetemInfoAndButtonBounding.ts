@@ -20,11 +20,6 @@ interface SystemInfo<N, S> {
 }
 let systemInfoAndMenuButton: SystemInfo<number, string>
 export function getSyetemInfoAndButtonBounding(): SystemInfo<number, string> {
-  console.log(Taro)
-  Taro.getSystemInfo({
-    success: res => console.log(res)
-  })
-    .then(res => console.log(res))
   try {
     const buttonBounding: MenuButton<number> = Taro.getMenuButtonBoundingClientRect();
     const systemInfo = Taro.getSystemInfoSync();
